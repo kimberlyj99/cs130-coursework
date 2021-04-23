@@ -1,21 +1,91 @@
-/* You're welcome to change any of this! */
 * {
     box-sizing: border-box;
 }
 
 body {
+    display: grid;
+    overflow: hidden;
     margin: 0px;
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    overflow-y: scroll;
+    grid-template-columns: 700px auto;
+    grid-template-rows: 200px auto 400px;
+    grid-template-areas:  
+    "title title"
+    "tutorials homework"
+    "inspo inspo";
 }
-header, section {
-    padding: 20px;
-}
-p, li {
-    line-height: 1.5em;
+header {
+    grid-area: title;
+    background-color: #FFD4D4;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
-#inspiration {
-    background-color: #F0F0F0;
-    padding-top: 40px;
-    padding-bottom: 40px;
+h1 {
+    font-family: 'Petit Formal Script', cursive;
+    font-size: 95px;
+}
+
+h2 {
+    font-family: 'Petit Formal Script', cursive;
+    font-size: 45px;
+    margin: 20px;
+}
+
+a {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+
+}
+main {
+    grid-area: tutorials;
+    color: #D1345B;
+    padding: 20px;
+}
+
+aside {
+    grid-area: homework;
+    align-items: flex-start;
+    color: #D1345B;
+    padding: 20px;
+}
+
+main, aside {
+    display: flex;
+    justify-content: center;
+}
+
+
+footer {
+    grid-area: inspo;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: #FFD4D4;
+    background-color: #D1345B;
+}
+.photo-section1 {
+    display: flex;
+    width: 25%;
+    flex-direction: column;
+}
+
+.photo-section1 img {
+    width: 100%;
+}
+
+.photo-section2 {
+    display: flex;
+    width: 25%;
+    flex-direction: column;
+}
+
+.photo-section2 img {
+    width: 100%;
 }
